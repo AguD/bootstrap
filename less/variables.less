@@ -6,6 +6,10 @@
 // Global values
 // --------------------------------------------------
 
+// Agu custom variables
+@colorboxSpritePath:    "../images/controls.png";
+@colorboxLoadingPath:   "../images/submitting.gif";
+@myFontFamily:          "Open Sans", sans-serif;
 
 // Grays
 // -------------------------
@@ -49,7 +53,7 @@
 @monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace;
 
 @baseFontSize:          14px;
-@baseFontFamily:        @sansFontFamily;
+@baseFontFamily:        @myFontFamily;
 @baseLineHeight:        20px;
 @altFontFamily:         @serifFontFamily;
 
@@ -88,8 +92,8 @@
 @btnBackgroundHighlight:            darken(@white, 10%);
 @btnBorder:                         #ccc;
 
-@btnPrimaryBackground:              @linkColor;
-@btnPrimaryBackgroundHighlight:     spin(@btnPrimaryBackground, 20%);
+@btnPrimaryBackground:              @orange;
+@btnPrimaryBackgroundHighlight:     spin(@orange, 5);
 
 @btnInfoBackground:                 #5bc0de;
 @btnInfoBackgroundHighlight:        #2f96b4;
@@ -151,8 +155,8 @@
 
 // Sprite icons path
 // -------------------------
-@iconSpritePath:          "../img/glyphicons-halflings.png";
-@iconWhiteSpritePath:     "../img/glyphicons-halflings-white.png";
+@iconSpritePath:          "../images/glyphicons-halflings.png";
+@iconWhiteSpritePath:     "../images/glyphicons-halflings-white.png";
 
 
 // Input placeholder text color
