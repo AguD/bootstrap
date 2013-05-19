@@ -142,9 +142,14 @@ body { //Compensate the fixed navbar at the tp
     background-position: top left;
     position: absolute;
     .square(100%);
+    top: 0px;
+    left: 0px;
+    .border-radius(4px);
 }
 
 .gripe-image{
+    margin: 20px 0px;
+    text-align: center;
     position: relative; // To allow put stuff above it
     .solved_entity{
         .solved-image();
@@ -152,19 +157,22 @@ body { //Compensate the fixed navbar at the tp
     .solved_community{
         .solved-image("solved_community.png");
     }
-    .actionsbar{
-        #translucent > .backgroundIE(black, 0.5);        
-        position: absolute;
-        .size(auto, 100%);
-        bottom: 0;
-        right: 0px;
-        .nav>li>a{
-            color: @white;
-            &:hover,
-            &:focus{background-color: @btnPrimaryBackground;}
+    .thumbnail{
+        display: inline-block;
+        position: relative;
+    }
+}
+
+.actionsbar{
+    #translucent > .backgroundIE(black, 0.5);
+    .size(auto, 100%);
+    .nav { 
+        margin: 0;
+        >li>a{
             .icon{vertical-align: bottom;}
         }
     }
+    .popover{white-space: nowrap;}
 }
 
 .brand{
@@ -314,3 +322,118 @@ body { //Compensate the fixed navbar at the tp
         background-position: -343px -165px;
     }
 }
+
+.gripe-creation form{
+    label{
+        .lead();
+        line-height: 20px;
+    }
+    .creation-group{        
+        margin-top: 25px;
+        overflow: hidden;
+    }
+    .form-horizontal{
+        .control-label{width: 200px;}
+        .controls{margin-left: 220px;}
+    }
+}
+
+.score{
+    font-weight:bold;
+    color: @green;
+    &.negative{color: @red;}
+}
+
+
+/* Fileuploader UI */
+.fileinput-button {
+  position: relative;
+  overflow: hidden;
+}
+.fileinput-button input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  margin: 0;
+  border: solid transparent;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -moz-transform: translate(-300px, 0) scale(4);
+  direction: ltr;
+  cursor: pointer;
+}
+
+.files .progress {
+  width: 200px;
+}
+
+.fileupload-progress{
+    position: absolute;
+    bottom: 0;
+}
+
+.progress-animated .bar {
+  background: url(../images/progressbar.gif) !important;
+  filter: none;
+}
+.fileupload-loading {
+  position: absolute;
+  left: 50%;
+  width: 128px;
+  height: 128px;
+  background: url(../images/submitting.gif) center no-repeat;
+  display: none;
+}
+.fileupload-processing .fileupload-loading {
+  display: block;
+}
+
+.preview-upload, .preview-uploaded{
+    position: relative;
+    #overlay{
+        position: absolute;
+        #translucent > .backgroundIE(white, 0.8);
+        .size(100%, 100%);
+    }
+    .btn-toolbar{
+        position: absolute;
+        top: 50%;
+        margin-top: -15px;
+        right: 50%;
+        margin-right: -90px;
+    }
+}
+
+/* Fix for IE 6: */
+*html .fileinput-button {
+  line-height: 22px;
+  margin: 1px -3px 0 0;
+}
+
+/* Fix for IE 7: */
+*+html .fileinput-button {
+  margin: 1px 0 0 0;
+}
+
+@media (max-width: 480px) {
+  .files .btn span {
+    display: none;
+  }
+  .files .preview * {
+    width: 40px;
+  }
+  .files .name * {
+    width: 80px;
+    display: inline-block;
+    word-wrap: break-word;
+  }
+  .files .progress {
+    width: 20px;
+  }
+  .files .delete {
+    width: 60px;
+  }
+}
+/* Fileuploader END */
