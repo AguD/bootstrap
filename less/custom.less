@@ -147,19 +147,22 @@ body { //Compensate the fixed navbar at the tp
     .border-radius(4px);
 }
 
+.gripe-image, .userprofile-image{
+    position: relative; // To allow put stuff above it
+    .thumbnail{
+        display: inline-block;
+        position: relative;
+    }
+}
+
 .gripe-image{
     margin: 20px 0px;
     text-align: center;
-    position: relative; // To allow put stuff above it
     .solved_entity{
         .solved-image();
     }
     .solved_community{
         .solved-image("solved_community.png");
-    }
-    .thumbnail{
-        display: inline-block;
-        position: relative;
     }
 }
 
@@ -290,6 +293,11 @@ body { //Compensate the fixed navbar at the tp
     }
 }
 
+.thumbnails.facefriends{
+    margin: 10px 0 0 0;
+    > li{margin: 0px 2px 0px 0px;}
+}
+
 .gripe-types{
     a {
         display: block;
@@ -303,24 +311,12 @@ body { //Compensate the fixed navbar at the tp
         height:45px;
         background-image: url(../images/sprite.png);
     }
-    .icon-event {
-        background-position: 5px -165px;
-    }
-    .icon-signatures {
-        background-position: -63px -165px;
-    }
-    .icon-apology {
-        background-position: -204px -165px;
-    }
-    .icon-compensation {
-        background-position: -134px -165px;
-    }
-    .icon-repair {
-        background-position: -275px -165px;
-    }
-    .icon-others {
-        background-position: -343px -165px;
-    }
+    .icon-event {background-position: 5px -165px;}
+    .icon-signatures {background-position: -63px -165px;}
+    .icon-apology {background-position: -204px -165px;}
+    .icon-compensation {background-position: -134px -165px;}
+    .icon-repair {background-position: -275px -165px;}
+    .icon-others {background-position: -343px -165px;}
 }
 
 .gripe-creation form{
