@@ -42,9 +42,9 @@
 
 // Links
 // -------------------------
-@linkColor:             #08c;
-@linkColorHover:        darken(@linkColor, 15%);
-
+@linkColor:             @gray;
+@linkColorHover:        darken(@orange, 10%);
+//darken(@orange, 10%)
 
 // Typography
 // -------------------------
@@ -58,7 +58,7 @@
 @altFontFamily:         @serifFontFamily;
 
 @headingsFontFamily:    inherit; // empty to use BS default, @baseFontFamily
-@headingsFontWeight:    bold;    // instead of browser default, bold
+@headingsFontWeight:    400;    // instead of browser default, bold
 @headingsColor:         inherit; // empty to use BS default, @textColor
 
 
@@ -94,6 +94,9 @@
 
 @btnPrimaryBackground:              @orange;
 @btnPrimaryBackgroundHighlight:     spin(@orange, 5);
+
+@btnSecondaryBackground: 			@grayLight;
+@btnSecondaryBackgroundHighlight:	spin(@grayLight, 5);
 
 @btnInfoBackground:                 #5bc0de;
 @btnInfoBackgroundHighlight:        #2f96b4;
