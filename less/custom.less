@@ -189,7 +189,6 @@ body { //Compensate the fixed navbar at the tp
 }
 
 .actionsbar{
-    #translucent > .backgroundIE(black, 0.5);
     .size(auto, 100%);
     .nav { 
         margin: 0;
@@ -392,24 +391,59 @@ body { //Compensate the fixed navbar at the tp
     p{margin-bottom: 0px;}
 }
 
+
+.rankings, .c_rankings,{
+    .logo{
+        position: relative;
+        width: 160px;
+        min-height: 100px;
+        max-height: 120px;
+        text-align: center;
+        overflow: hidden;
+        span{ 
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            line-height: 18px;
+            color: white;
+            #translucent > .background(black, 0.5);
+            .square(18px);
+        }
+    }
+    h4{ font-size: 20px; line-height: 30px;}
+}
+
+.rankings{
+    [class*="span"]{
+        border-right: 1px solid #e5e5e5;
+        &:last-child{ border-right: none;};
+    }
+}
+
 /* Fileuploader UI */
 .fileinput-button {
   position: relative;
   overflow: hidden;
 }
 .fileinput-button input {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  right: 0;
-  margin: 0;
-  border: solid transparent;
-  opacity: 0;
-  filter: alpha(opacity=0);
-  -moz-transform: translate(-300px, 0) scale(4);
-  direction: ltr;
-  cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    opacity: 0;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: block;
+    font-size: 400px;
+    width: 100%;
+    height: 100%;
+    border: solid transparent;
+    border-width: 0 0 407px 22px;
+    filter: alpha(opacity=0);
+    //-moz-transform: translate(-300px, 0) scale(4); //Firefox
+    font-size: 23px;
+    direction: ltr;
+    cursor: pointer;
 }
 
 .files .progress {
