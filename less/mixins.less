@@ -401,7 +401,7 @@
     @ieColor: argb(@rgbaColor);
     background-color: transparent;
     background-color: @rgbaColor;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=@ieColor, endColorstr=@ieColor); // IE9 and down
+    filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d')",@ieColor,@ieColor));
     zoom: 1;
   }
   .background(@color: @white, @alpha: 1) {
